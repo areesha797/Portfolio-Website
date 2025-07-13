@@ -1,2 +1,2 @@
 # Portfolio-Website
-Build a personal portfolio website using HTML , CSS and Javascript.
+Build my personal portfolio website using HTML , CSS and Javascript.
