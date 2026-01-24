@@ -1,52 +1,64 @@
+/* =====================
+   GLOBAL STYLES
+===================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: Segoe UI, sans-serif;
   background: #121212;
-  color: #e0e0e0;
-  padding-top: 80px;
+  color: #e5e7eb;
+  line-height: 1.6;
 }
 
-/* NAVBAR */
+/* =====================
+   NAVBAR
+===================== */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #1e1e1e;
+  background: #0f172a;
   z-index: 1000;
 }
 
 .nav-container {
   max-width: 1200px;
   margin: auto;
-  padding: 1rem 2rem;
+  padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .nav-logo {
-  color: #00bfa5;
-  font-size: 1.4rem;
+  color: #00e0c6;
+  font-size: 1.3rem;
+  font-weight: bold;
   text-decoration: none;
 }
 
 .nav-menu {
   display: flex;
-  gap: 1.5rem;
+  gap: 20px;
 }
 
 .nav-link {
-  color: #e0e0e0;
+  color: #cbd5f5;
   text-decoration: none;
+  transition: color 0.3s;
 }
 
-.nav-link:hover {
-  color: #00bfa5;
+.nav-link:hover,
+.nav-link.active {
+  color: #00e0c6;
 }
 
 .nav-toggle {
@@ -56,145 +68,178 @@ body {
 }
 
 .nav-toggle span {
-  background: #fff;
   height: 3px;
   width: 25px;
-  margin: 4px 0;
+  background: #fff;
+  margin-bottom: 4px;
+  border-radius: 2px;
 }
 
-/* HEADER */
+/* =====================
+   HEADER
+===================== */
 header {
-  background: linear-gradient(90deg, #008080, #6a0dad);
+  min-height: 100vh;
+  padding-top: 100px;
   text-align: center;
-  padding: 40px 20px;
 }
 
 header img {
-  width: 120px;
-  height: 120px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
-  border: 3px solid white;
+  object-fit: cover;
+  border: 4px solid #00e0c6;
+  margin-bottom: 20px;
 }
 
-h1, h2 {
-  color: #00bfa5;
-  margin-bottom: 10px;
+header h1 {
+  font-size: 2.5rem;
+  color: #ffffff;
 }
 
-/* SECTIONS */
+header p {
+  margin-top: 10px;
+  color: #9ca3af;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =====================
+   SECTIONS
+===================== */
 .section {
-  max-width: 1000px;
-  margin: 20px auto;
-  padding: 20px;
-  background: #1e1e1e;
-  border-radius: 10px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 80px 20px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
 }
 
-/* LIST */
-.education-list {
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section h2 {
+  color: #00e0c6;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+/* =====================
+   EDUCATION / EXPERIENCE
+===================== */
+.education-list,
+.experience-list {
   list-style: none;
 }
 
-.education-list li {
-  background: #2a2a2a;
-  padding: 10px;
-  margin: 8px 0;
-  border-left: 4px solid #00bfa5;
+.education-list li,
+.experience-list li {
+  margin-bottom: 15px;
+  color: #d1d5db;
 }
 
-/* PROJECTS */
-.projects, .skills {
+/* =====================
+   PROJECTS
+===================== */
+.projects {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background: #1f2933;
+  padding: 20px;
+  border-radius: 18px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* FULL IMAGE */
+.project-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 18px;
+}
+
+.project-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+.project-card ul {
+  padding-left: 18px;
+  color: #d1d5db;
+}
+
+/* =====================
+   CERTIFICATIONS & SKILLS
+===================== */
+.card {
+  background: #1f2933;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 15px;
 }
 
-.card {
-  background: #2c2c2c;
-  padding: 15px;
-  border-radius: 8px;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.project-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.project-images {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 8px 12px;
-  background: #00bfa5;
-  color: #000;
+/* =====================
+   CONTACT
+===================== */
+#contact a {
+  color: #00e0c6;
   text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
 }
 
-/* MODAL */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 2000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.9);
+#contact a:hover {
+  text-decoration: underline;
 }
 
-.modal-content {
-  margin: auto;
-  display: block;
-  max-width: 90%;
-  margin-top: 80px;
-}
-
-.close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  color: white;
-  font-size: 35px;
-  cursor: pointer;
-}
-
-/* FOOTER */
+/* =====================
+   FOOTER
+===================== */
 footer {
   text-align: center;
-  background: #008080;
-  color: white;
-  padding: 15px;
-  margin-top: 20px;
+  padding: 20px;
+  background: #0f172a;
+  color: #9ca3af;
 }
 
-/* RESPONSIVE */
+/* =====================
+   RESPONSIVE
+===================== */
 @media (max-width: 768px) {
-  .projects, .skills {
-    grid-template-columns: 1fr;
-  }
-
   .nav-menu {
-    display: none;
-    flex-direction: column;
-    background: #1e1e1e;
     position: absolute;
-    top: 70px;
-    width: 100%;
+    top: 60px;
+    right: 0;
+    background: #0f172a;
+    flex-direction: column;
+    width: 200px;
+    display: none;
+    padding: 20px;
   }
 
   .nav-menu.active {
@@ -203,5 +248,13 @@ footer {
 
   .nav-toggle {
     display: flex;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
+
+  .project-img {
+    height: 220px;
   }
 }
