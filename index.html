@@ -1,209 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Areesha Naeem - Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <nav class="navbar">
-      <div class="nav-container">
-        <a href="#home" class="nav-logo">Areesha Naeem</a>
-        <div class="nav-menu">
-          <a href="#home" class="nav-link">Home</a>
-          <a href="#about" class="nav-link">About</a>
-          <a href="#education" class="nav-link">Education</a>
-          <a href="#portfolio" class="nav-link">Portfolio</a>
-          <a href="#certifications" class="nav-link">Certifications</a>
-          <a href="#skills" class="nav-link">Skills</a>
-          <a href="#contact" class="nav-link">Contact</a>
-        </div>
-        <div class="nav-toggle">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Areesha Naeem | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    <header id="home">
-      <img src="images/Pro.jpg" alt="Areesha Naeem Photo" />
-      <h1>AREESHA NAEEM</h1>
-      <p>
-          Final Year BS Computer Science Student || COMSATS ’26 || Aspiring Data Analyst (Power BI Learner) || Excel || SQL || Python      </p>
-    </header>
+<body>
 
-    <section class="section" id="about">
-      <h2>ABOUT ME</h2>
-      <p>
-        Final Year BS Computer Science student at COMSATS University Islamabad,Attock Campus (Batch 
-2026) with a strong focus on Data Analytics and Business Intelligence. Hands-on experience in 
-designing interactive, insight-driven dashboards. Skilled in Excel, Power BI, SQL, and Python with 
-a solid technical foundation enabling a strong understanding of data-driven applications and 
-visualization.
-      </p>
-    </section>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="#home" class="nav-logo">Areesha Naeem</a>
 
-    <section class="section" id="education">
-      <h2>EDUCATION</h2>
-      <ul class="education-list">
-        <li>Fazaia Degree College ARF Kamra — Matriculation (2018) — 90%</li>
-        <li>Fazaia Degree College ARF Kamra — F.Sc (2020) — 88%</li>
-        <li>
-          COMSATS University Islamabad, Attock Campus — Bachelor's In Computer
-          Science- CGPA 3.50
-        </li>
-      </ul>
-    </section>
+    <div class="nav-menu" id="navMenu">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#education" class="nav-link">Education</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#portfolio" class="nav-link">Projects</a>
+      <a href="#certifications" class="nav-link">Certifications</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
 
-   <section class="section" id="experience">
+    <div class="nav-toggle" id="navToggle">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<header id="home">
+  <img src="images/Pro.jpg" alt="Areesha Naeem">
+  <h1>AREESHA NAEEM</h1>
+  <p>
+    Final Year BS Computer Science Student | COMSATS ’26 <br>
+    Aspiring Data Analyst | Power BI | Excel | SQL | Python
+  </p>
+</header>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <h2>ABOUT ME</h2>
+  <p>
+    Final Year BS Computer Science student at COMSATS University Islamabad,
+    Attock Campus (Batch 2026). Strong interest in Data Analytics and Business
+    Intelligence with hands-on experience in Power BI dashboards, data analysis,
+    and visualization.
+  </p>
+</section>
+
+<!-- EDUCATION -->
+<section class="section" id="education">
+  <h2>EDUCATION</h2>
+  <ul class="education-list">
+    <li>Matric – Fazaia Degree College ARF Kamra (2018) – 90%</li>
+    <li>F.Sc – Fazaia Degree College ARF Kamra (2020) – 88%</li>
+    <li>BS Computer Science – COMSATS Attock – CGPA 3.50</li>
+  </ul>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="section" id="experience">
   <h2>EXPERIENCE</h2>
-  <ul class="experience-list">
+  <ul class="education-list">
     <li>
-      Internship at <strong>Pakistan Aeronautical Complex (PAC), Kamra</strong> 
-      (14 July – 25 August 2025, 6 weeks) – Worked on bridging computer science with aerospace applications.
-Developed a strong understanding of industrial automation and Al
-assisted modeling.
-Collaborated with cross-functional teams to analyze data and optimize 
-manufacturing processes using computational methods.
+      <strong>Intern – Pakistan Aeronautical Complex (PAC), Kamra</strong><br>
+      July–August 2025 (6 Weeks)<br>
+      Worked on industrial automation, AI-assisted modeling, and data-driven
+      manufacturing optimization.
     </li>
   </ul>
 </section>
-    <section class="section" id="portfolio">
+
+<!-- PROJECTS -->
+<section class="section" id="portfolio">
   <h2>PROJECTS</h2>
+
   <div class="projects">
 
     <!-- Project 1 -->
     <div class="card project-card">
-      <img src="images/e-commerce.png" alt="E-Commerce Sales Dashboard" />
+      <img src="images/ecommerce.png" onclick="openModal(this.src)">
       <h3>E-Commerce Sales Dashboard</h3>
-      <ul>
-        <li>Developed interactive dashboard analyzing sales performance, revenue trends, and product-wise insights.</li>
-        <li>Used KPIs, bar charts, pie charts, donut charts, and slicers for dynamic reporting.</li>
-        <li><strong>Skills:</strong> Microsoft Power BI, DAX, Data Cleaning</li>
-      </ul>
+      <p>Interactive sales & revenue analysis dashboard.</p>
+      <a class="btn" href="#" target="_blank">View Dashboard</a>
     </div>
 
     <!-- Project 2 -->
     <div class="card project-card">
-      <img src="images/HR Analytics.png" alt="HR Analytics Dashboard" />
+      <img src="images/HR-Analytics.png" onclick="openModal(this.src)">
       <h3>HR Analytics Dashboard</h3>
-      <ul>
-        <li>Built an interactive HR Analytics dashboard using Power BI.</li>
-        <li>Includes department-wise and gender-wise insights.</li>
-        <li>Fully interactive dashboard where visuals update on click.</li>
-        <li><strong>Skills:</strong> Power BI, Excel, Data Analysis</li>
-      </ul>
+      <p>Employee insights with KPIs & filters.</p>
+      <a class="btn" href="#" target="_blank">View Dashboard</a>
     </div>
 
     <!-- Project 3 -->
     <div class="card project-card">
-      <img src="images/sales1.png" alt="Super Store Sales Dashboard" />
-      <img src="images/sales2.png" alt="Super Store Sales Dashboard" />
-
+      <div class="project-images">
+        <img src="images/sales1.png" onclick="openModal(this.src)">
+        <img src="images/sales2.png" onclick="openModal(this.src)">
+      </div>
       <h3>Super Store Sales Dashboard</h3>
-      <ul>
-        <li>Applied time series analysis for sales forecasting.</li>
-        <li>Created interactive dashboard to drive business insights.</li>
-        <li><strong>Skills:</strong> Power BI, Excel, KPI Reporting, Sales Forecasting</li>
-      </ul>
+      <p>Forecasting & performance analytics.</p>
+      <a class="btn" href="#" target="_blank">View Dashboard</a>
     </div>
 
   </div>
 </section>
-    
-    <section class="section" id="certifications">
-      <h2>CERTIFICATIONS</h2>
-      <div class="projects">
-        <div class="card">
-          <img
-            src="images/PACa.jpeg"
-            alt="PAC Kamra Internship "
-          />
-          <p>
-            Internship Training Certificate<br /><small
-              >Pakistan Aeronautical Complex(PAC) Kamra</small
-            >
-          </p>
-        </div>
 
-        <div class="card">
-          <img
-            src="images/Saylor AI.jpeg"
-            alt="Saylor Academy Certificate"
-          />
-          <p>
-            Building with Artificial Intelligence<br /><small
-              >Saylor Academy </small
-            >
-          </p>
-        </div>
+<!-- CERTIFICATIONS -->
+<section class="section" id="certifications">
+  <h2>CERTIFICATIONS</h2>
+  <div class="projects">
+    <div class="card"><img src="images/PACa.jpeg"></div>
+    <div class="card"><img src="images/Saylor AI.jpeg"></div>
+    <div class="card"><img src="images/freelancing_competition.jpg"></div>
+    <div class="card"><img src="images/simplilearn_ai.jpg"></div>
+  </div>
+</section>
 
-        
-        
-        <div class="card">
-          <img
-            src="images/freelancing_competition.jpg"
-            alt="Freelancing Coding Competition Certificate"
-          />
-          <p>
-            Freelancing Coding Competition<br /><small
-              >COMSATS Freelancing Society</small
-            >
-          </p>
-        </div>
+<!-- SKILLS -->
+<section class="section" id="skills">
+  <h2>SKILLS</h2>
+  <div class="skills">
+    <div class="card">Power BI</div>
+    <div class="card">Excel</div>
+    <div class="card">SQL</div>
+    <div class="card">Python</div>
+    <div class="card">Data Visualization</div>
+    <div class="card">KPI Reporting</div>
+  </div>
+</section>
 
-        
-        
-        <div class="card">
-          <img
-            src="images/simplilearn_ai.jpg"
-            alt="Introduction to AI Certificate"
-          />
-          <p>
-            Introduction to Artificial Intelligence<br /><small
-              >Simplilearn</small
-            >
-          </p>
-        </div>    
-    </section>
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <h2>CONTACT</h2>
+  <p>Email: <a href="mailto:areesha.naeem122@gmail.com">areesha.naeem122@gmail.com</a></p>
+  <p>
+    LinkedIn:
+    <a href="https://www.linkedin.com/in/areesha-naeem-088507342" target="_blank">
+      linkedin.com/in/areesha-naeem
+    </a>
+  </p>
+</section>
 
-    <section class="section" id="skills">
-      <h2>SKILLS</h2>
-      <div class="skills">
-        <div class="card">Microsoft Power BI</div>
-        <div class="card">Microsoft Excel (Data cleaning, Pivot tables, Analysis)</div>
-        <div class="card">SQL(Data Retrieval & Analysis)</div>
-        <div class="card">Python</div>
-        <div class="card">Data Visualization and KPI Reporting</div>
-        <div class="card">Business and Sales Performance Analysis </div>
-        <div class="card">Workforce Insights</div>
-        <div class="card">DAX Basics , Power Query & Data Modeling</div>
-        <div class="card">Communication & TeamWork</div>
-      </div>
-    </section>
+<footer>© 2025 Areesha Naeem</footer>
 
-    <section class="section" id="contact">
-      <h2>FEEL FREE TO CONTACT ME!</h2>
-      <p>
-        Email:
-        <a href="mailto:areesha.naeem122@gmail.com">areesha.naeem122@gmail.com</a>
-      </p>
-      <p>
-        LinkedIn:
-        <a
-          href="https://www.linkedin.com/in/areesha-naeem-088507342"
-          target="_blank"
-        >
-          linkedin.com/in/areesha-naeem-088507342
-        </a>
-      </p>
-     
-    </section>
+<!-- IMAGE MODAL -->
+<div id="imgModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
 
-    <footer>&copy; 2025 Areesha Naeem | All rights reserved</footer>
-
-    <script src="script.js"></script>
-  </body>
+<script src="script.js"></script>
+</body>
 </html>
