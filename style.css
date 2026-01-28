@@ -59,8 +59,8 @@ body {
 
 /* HERO */
 header {
-  padding-top: 120px;
-  padding-bottom: 60px;   /* 🔽 gap kam */
+  padding-top: 110px;
+  padding-bottom: 25px;   /* 🔽 gap kam */
   min-height: 90vh;
   text-align: center;
 }
@@ -87,7 +87,7 @@ header p {
 .section {
   max-width: 1200px;
   margin: auto;
-  padding: 50px 24px;   /* 🔥 YAHAN GAP FIX HUA */
+  padding: 40px 24px;   /* 🔥 YAHAN GAP FIX HUA */
 }
 
 .section h2 {
@@ -262,4 +262,26 @@ header p {
 footer {
   text-align: center;
   padding: 18px;
+}
+
+/* FLOATING HIRE ME BUTTON */
+.hire-me-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, #3a5a40, #344e41);
+  color: #dad7cd;
+  padding: 14px 26px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  transition: 0.3s ease;
+  z-index: 1000;
+}
+
+.hire-me-btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  background: #dad7cd;
+  color: #1b2d2a;
 }
