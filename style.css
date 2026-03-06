@@ -81,7 +81,7 @@ header p {
   margin-top: 8px;
 }
 
-/* ================= SECTIONS (GAP FIX) ================= */
+/* ================= SECTIONS ================= */
 .section {
   max-width: 1200px;
   margin: auto;
@@ -157,9 +157,7 @@ header p {
   font-weight: 600;
 }
 
-/* =====================================================
-   PROJECTS – ROW STYLE (NEW + REPLACED)
-===================================================== */
+/* ================= PROJECTS ================= */
 .project-list {
   display: flex;
   flex-direction: column;
@@ -180,7 +178,6 @@ header p {
   transform: translateY(-6px);
 }
 
-/* IMAGE */
 .project-img {
   background: rgba(52,78,65,0.9);
   display: flex;
@@ -203,7 +200,6 @@ header p {
   transform: scale(1.06);
 }
 
-/* CONTENT */
 .project-content {
   padding: 40px 36px;
   color: white;
@@ -220,7 +216,6 @@ header p {
   line-height: 1.7;
 }
 
-/* TAGS */
 .project-tags {
   display: flex;
   gap: 10px;
@@ -235,22 +230,6 @@ header p {
   border-radius: 999px;
   font-weight: 600;
   font-size: 0.9rem;
-}
-
-/* BUTTON */
-.project-btn {
-  display: inline-block;
-  background: #0f9d58;
-  color: #ffffff;
-  padding: 12px 26px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 700;
-  transition: 0.3s ease;
-}
-
-.project-btn:hover {
-  background: #0b7c45;
 }
 
 /* ================= SKILLS ================= */
@@ -291,55 +270,10 @@ header p {
   font-weight: 600;
 }
 
-/* ================= MODAL ================= */
-.modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.8);
-  justify-content: center;
-  align-items: center;
-}
-
-.modal img {
-  max-width: 90%;
-  border-radius: 12px;
-}
-
-.close {
-  position: absolute;
-  top: 20px;
-  right: 40px;
-  font-size: 40px;
-  cursor: pointer;
-}
-
 /* ================= FOOTER ================= */
 footer {
   text-align: center;
   padding: 18px;
-}
-
-/* ================= FLOATING HIRE ME ================= */
-.hire-me-btn {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background: linear-gradient(135deg, #3a5a40, #344e41);
-  color: #dad7cd;
-  padding: 14px 26px;
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: 700;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-  transition: 0.3s ease;
-  z-index: 1000;
-}
-
-.hire-me-btn:hover {
-  transform: translateY(-5px) scale(1.05);
-  background: #dad7cd;
-  color: #1b2d2a;
 }
 
 /* ================= RESPONSIVE ================= */
@@ -350,5 +284,41 @@ footer {
 
   .project-content {
     padding: 28px;
+  }
+}
+
+/* ================= FLOATING HIRE ME BUTTON ================= */
+.hire-me-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, #3a5a40, #344e41);
+  color: #dad7cd;
+  padding: 14px 26px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  transition: 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+  animation: pulse 2.5s infinite;
+}
+
+.hire-me-btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  background: #dad7cd;
+  color: #1b2d2a;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(58, 90, 64, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(58, 90, 64, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(58, 90, 64, 0);
   }
 }
